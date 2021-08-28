@@ -1,0 +1,19 @@
+@import './src/styles/variables';
+
+.root {
+  width: 13rem;
+  font-size: 1.4rem;
+
+}
+
+.img {
+  width: 13rem;
+  height: 22rem;
+  border: 0.1rem solid white;
+  border-radius: .4rem;
+}
+
+.svg {
+  margin: 0 .1rem;
+  color: $accent-color; 
+}

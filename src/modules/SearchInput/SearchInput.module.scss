@@ -1,0 +1,31 @@
+@import './src/styles/variables';
+
+.root {
+  // width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  // background-color: yellow;
+}
+.input {
+  width: 100%;
+  background-color: black;
+  border-radius: 10rem;
+  border: .1rem solid $accent-color;
+  outline: none;
+  color: white; 
+  padding:1rem 3rem 1rem 4rem;
+
+  &::placeholder{
+    color: $grey;
+  }
+}
+
+.svg{
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $grey;
+}

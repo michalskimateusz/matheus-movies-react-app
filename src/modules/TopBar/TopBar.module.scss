@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  flex: 2;
+}
+
+.input {
+  flex: 3;
+}
+
+.links {
+  flex: 2;
+}
