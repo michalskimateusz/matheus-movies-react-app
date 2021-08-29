@@ -63,10 +63,10 @@ const MovieDetailsView = ({setMovieDetailsAction, movieDetails}) => {
           <CategoryHeader category="Movie Details" text={movieDetails.Plot}/>
           <CategoryHeader category="Awards" text={movieDetails.Awards}/>
           <div className={styles.ratings}>
-            {movieDetails.Ratings.map(rating => {
+            {movieDetails.Ratings.map((rating, index) => {
               return (
                 <Rating
-                  key={rating.value}
+                  key={index}
                   source={rating.Source}
                   value={rating.Value}
                 />
