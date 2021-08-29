@@ -1,0 +1,24 @@
+@import './src/styles/variables';
+
+.root {
+  position: relative;
+  padding: 1rem;
+}
+
+.line {
+  position: absolute;
+  top: 1.5rem;
+  left: -.5rem;
+  width: .3rem;
+  height: 5rem;
+  background-color: $accent-color;
+}
+
+.header {
+  font-size: 4rem;
+  
+}
+
+.text {
+  font-size: 1.6rem;
+}

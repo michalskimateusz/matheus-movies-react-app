@@ -3,16 +3,9 @@ import { Link } from 'react-router-dom';
 import { iconStar } from '../../assets/svg/svg';
 import Svg from '../Svg/Svg';
 import styles from './MovieCard.module.scss';
+import getTitle from '../../utils/getTitle';
 
 const starsArray = [1, 2, 3, 4, 5];
-
-const getTitle = (title) => {
-  return title
-    .toLowerCase()
-    .replace(/[%#<>@;:/?!&+=${}',.-]/g, '')
-    .split(/\s+/)
-    .join('-');
-}
 
 const MovieCard = ({
   id,
@@ -29,7 +22,7 @@ const MovieCard = ({
       <div className={styles.year}>
         {year}
       </div>
-      {starsArray.map((el, index)  => (
+      {starsArray.map(index  => (
         <Svg
           key={index}
           icon={iconStar}

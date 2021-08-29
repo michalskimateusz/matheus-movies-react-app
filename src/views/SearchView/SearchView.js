@@ -6,6 +6,7 @@ import { setMovies, setPageNumber } from '../../store/reducers/appSlice/appSlice
 import MovieList from '../../modules/MovieList/MovieList';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import TopBar from '../../modules/TopBar/TopBar';
+import CategoryHeader from '../../components/Button/CategoryHeader/CategoryHeader';
 
 const SearchView = ({ query, movies, setMoviesAction, page, setPageNumberAction }) => {
   console.log({
@@ -48,6 +49,7 @@ const SearchView = ({ query, movies, setMoviesAction, page, setPageNumberAction 
   return (
     <div className={styles.root}>
       <TopBar />
+      <CategoryHeader category="Your Movies"/>
       {!movies || movies.length === 0 ? (
        <div>No results</div> 
       ): (

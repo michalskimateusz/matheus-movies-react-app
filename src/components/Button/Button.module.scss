@@ -1,0 +1,19 @@
+@import './src/styles/variables';
+.root {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: lighten($accent-color, 5%);
+  border-radius: 2.5rem;
+  border: none;
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($accent-color, 2%);
+  }
+}

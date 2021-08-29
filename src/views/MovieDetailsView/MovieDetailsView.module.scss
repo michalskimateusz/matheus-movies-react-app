@@ -1,3 +1,43 @@
+@import './src/styles/variables';
+
 .root {
-  background-color: cyan;
+  font-size: 1.6rem;
+  margin: 0 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $dark-grey;
+  border-radius: 2rem;
+  padding: 3rem;
+}
+
+.dataWrapper {
+  flex: 1;
+}
+
+.imgWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.img {
+  border-radius: 1rem;
+  width: 30rem;
+}
+
+.svg {
+  margin: 0 .1rem;
+  color: $accent-color; 
+}
+
+.ratings {
+  display: flex;
 }

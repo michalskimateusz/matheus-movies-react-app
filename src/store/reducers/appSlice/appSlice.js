@@ -13,6 +13,9 @@ const appSlice = createSlice({
     },
     setQuery(state, { payload }) {
       state.query = payload;
+    },
+    setMovieDetails(state, { payload }) {
+      state.movieDetails = payload;
     }
   }
 });
@@ -20,7 +23,8 @@ const appSlice = createSlice({
 export const {
   setMovies,
   setPageNumber,
-  setQuery
+  setQuery,
+  setMovieDetails
 } = appSlice.actions;
 
 export default appSlice.reducer;

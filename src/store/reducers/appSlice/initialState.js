@@ -1,7 +1,8 @@
 const initialState = {
   movies: [],
   page: 1,
-  query: 'fast'
+  query: 'fast',
+  movieDetails: null
 };
 
 export default initialState;
