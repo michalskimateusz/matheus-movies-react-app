@@ -1,17 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { iconStar } from '../../assets/svg/svg';
 import Svg from '../Svg/Svg';
 import styles from './MovieCard.module.scss';
 
 const starsArray = [1, 2, 3, 4, 5];
 
+const getTitle = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[%#<>@;:/?!&+=${}',.-]/g, '')
+    .split(/\s+/)
+    .join('-');
+}
+
 const MovieCard = ({
+  id,
   img,
   title,
   year
 }) => {
   return (
-    <div className={styles.root}>
+    <Link
+      to={`/movie/${id}/details/${getTitle(title)}`}
+      className={styles.root}
+    >
       <img className={styles.img} src={img === 'N/A' ? 'https://yifyhdyify.com/img/default_thumbnail.svg' : img} alt={title}/>
       <div className={styles.year}>
         {year}
@@ -27,7 +40,7 @@ const MovieCard = ({
       <div className={styles.title}>
         {title}
       </div>
-    </div>
+    </Link>
    );
 }
  

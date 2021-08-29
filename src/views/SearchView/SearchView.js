@@ -19,7 +19,10 @@ const SearchView = ({ query, movies, setMoviesAction, page, setPageNumberAction 
         type: 'movie',
         page
       }
-    }).then(({data}) => {
+    }).then(({ data }) => {
+      if (!data.Search) {
+        return setMoviesAction([]);
+      }
       console.log(data.Search);
       if (page === 1) {
         setMoviesAction(data.Search)
@@ -44,7 +47,10 @@ const SearchView = ({ query, movies, setMoviesAction, page, setPageNumberAction 
 
   return (
     <div className={styles.root}>
-      <TopBar/>
+      <TopBar />
+      {!movies || movies.length === 0 ? (
+       <div>No results</div> 
+      ): (
       <InfiniteScroll
         dataLength={movies.length}
         next={fetchData}
@@ -53,7 +59,8 @@ const SearchView = ({ query, movies, setMoviesAction, page, setPageNumberAction 
         endMessage={'Wincyj nima'}
       >
         <MovieList />
-      </InfiniteScroll>  
+      </InfiniteScroll> 
+      )}
     </div>
    );
 }

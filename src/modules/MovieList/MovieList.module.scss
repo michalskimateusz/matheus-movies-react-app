@@ -1,8 +1,5 @@
 .root {
   display: flex;
   flex-wrap: wrap;
-}
-
-.item {
-  padding: 1rem 1rem;
+  justify-content: flex-start;
 }
