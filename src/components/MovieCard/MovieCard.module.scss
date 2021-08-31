@@ -1,15 +1,15 @@
 @import './src/styles/variables';
 
 .root {
-  width: 13rem;
+  width: 15rem;
   font-size: 1.4rem;
-  margin: 1rem;
+  margin: 1.5rem;
 }
 
 .img {
-  width: 13rem;
-  height: 22rem;
-  border: 0.1rem solid white;
+  width: 15rem;
+  height: 23rem;
+  border: 0.1rem solid $grey;
   border-radius: .4rem;
 }
 

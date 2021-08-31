@@ -57,8 +57,8 @@ const SearchView = ({ query, movies, setMoviesAction, page, setPageNumberAction 
         dataLength={movies.length}
         next={fetchData}
         hasMore={true}
-        loader={'Zara, Japa, Ide'}
-        endMessage={'Wincyj nima'}
+        loader={'Scroll down for more'}
+        endMessage={'There are no more movies to find'}
       >
         <MovieList />
       </InfiniteScroll> 
