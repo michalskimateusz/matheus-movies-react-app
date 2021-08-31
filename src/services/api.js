@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiKey = process.env.REACT_APP_OMDB_API_KEY;
-const baseUrl = `http://www.omdbapi.com/?apikey=${apiKey}`;
+const baseUrl = `https://www.omdbapi.com/?apikey=${apiKey}`;
 
 const api = axios.create({
   baseURL: baseUrl,
